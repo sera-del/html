@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>サイト模写</title>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -10,38 +11,55 @@
     <div>
       
       <div class="background">
-      <div class="header">
-        <div>
+        
+         <div class="header">
+           
+         <div>
           <p class="light">
           <a href="https://camp.potepan.com/"><img class="header_logo" src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/header-logo.png.webp" alt="ポテパンロゴ"></img></a>
           </p>
          </div>
-        <div class="header_right">
-         <div>
-          <a href="https://camp.potepan.com/content" class="black"><b>CONTENT</b><br>
+         
+         
+         <div class="nav">
+             
+              <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+         
+         <nav class="nav_content">    
+         <ul class="header_right nav_list">
+         <li>
+          <a href="https://camp.potepan.com/content" class="black nav_item"><b>CONTENT</b><br>
           学習内容</a>
-          </div>
-          <div>
-          <a href="https://camp.potepan.com/interview" class="black"><b>INTERVIEW</b><br>
+          </li>
+          <li>
+          <a href="https://camp.potepan.com/interview" class="black nav_item"><b>INTERVIEW</b><br>
           受講生の声</a>
-          </div>
-          <div>
-          <a href="https://camp.potepan.com/faq" class="black"><b>FAQ</b><br>
+          </li>
+          <li>
+          <a href="https://camp.potepan.com/faq" class="black nav_item"><b>FAQ</b><br>
           よくある質問</a>
-          </div>
-          <div>
-          <a href="https://camp.potepan.com/recruit" class="black"><b>RECRUIT</b><br>
+          </li>
+          <li>
+          <a href="https://camp.potepan.com/recruit" class="black nav_item"><b>RECRUIT</b><br>
           採用企業様へ</a>
-          </div>
-          <div>
-          <a href="https://camp.potepan.com/download" class="black"><b>DOCUMENT</b><br>
+          </li>
+          <li>
+          <a href="https://camp.potepan.com/download" class="black nav_item"><b>DOCUMENT</b><br>
           資料請求</a>
-          </div>
-          <div>
-          <a href="https://camp.potepan.com/contact" class="orange_button">無料カウンセリング</a>
-          </div>
+          </li>
+          <li>
+          <a href="https://camp.potepan.com/contact" class="orange_button nav_item">無料カウンセリング</a>
+          </li>
+          </ul>
+       </nav>
        </div>
+       
       </div>
+      
       
       <div class="main_content">
        <p class="text_big">
@@ -49,9 +67,9 @@
         未経験からWEBエンジニアへ
        </p>
        <div class="benefit_image">
-        <img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/100percent@2x.svg" alt="内定率100%">
-        <img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/no1@2x.svg" alt="エンジニア排出No1">
-        <img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/refund@2x.svg" alt="全額返金">
+        <img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/100percent@2x.svg" class="img_left" alt="内定率100%">
+        <img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/no1@2x.svg" class="img_center" alt="エンジニア排出No1">
+        <img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/refund@2x.svg" class="img_right" alt="全額返金">
        </div>
        <div class="entry">
        <a href="https://camp.potepan.com/contact" class="orange_button2">無料カウンセリングはこちら</a>
@@ -65,11 +83,11 @@
       </div>
       </div>
       
+      
       <div class="footer">
-        <div>
+        <section class="footer2">
          <video src="https://res.cloudinary.com/hqt02ldfz/video/upload/v1650946041/IntroductionMovie/PotepanCamp/movie_sxheh6.mp4" controls class="video" alt="ポテパン動画">
          </video>
-         </div>
          <div>
           <p class="text_big2">POTEPAN CAMPとは</p>
           <p class="white_text">
@@ -80,7 +98,9 @@
           </p>
           <a href="https://camp.potepan.com/content" class="under_del"><img src="https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/about/arrow-icon.svg" class="right_arrow" alt="矢印">学習内容はこちらから</a>
         </div>
+        </section>
       </div>
+      
       
     </div>
   </body>
