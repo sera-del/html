@@ -1,6 +1,22 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
+}
+
+Header {
+  display: block;
+}
+
+.Header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.Header {
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
 }
 
 .background {
@@ -8,6 +24,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 100px;
+    padding-bottom: 28px;
 }
 
 .header_logo {
@@ -24,8 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 20px 20px;
     font-size: 11px;
 }
 
@@ -36,7 +53,6 @@ body {
 .header_right {
     display: flex;
     justify-content: between;
-    padding-top: 20px;
     align-items: center;
     text-align: center;
     gap: 50px;
@@ -69,7 +85,7 @@ body {
 }
 
 .hamburger {
-  width: 0px;
+  width: 100px;
 }
 
 .main_content {
@@ -78,6 +94,7 @@ body {
     padding-right: 50px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .text_big {
@@ -149,6 +166,11 @@ body {
     display: flex;
 }
 
+.footer-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .text_big2 {
     font-size: 35px;
     padding-left: 30px;
@@ -166,15 +188,147 @@ body {
     padding-left: 30px;
 }
 
-.right_arrow {
-    height: 15px;
-    width:  26px;
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .footer2 {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+  .video {
+    width: 75%;
+}
+}
+
+
+@media screen and (max-width: 1080px) {
+ .Header {
+    background-color: #fff;
+    z-index: 10;
+}
+ 
+  .Header-common {
+    position: fixed !important;
+}
+  
+  
+    /* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 8px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 8px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: .5s;
+}
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  left: 0;/* メニューを画面に入れる */
+}
+
+.nav_list {
+  display: flex;
+  flex-direction: column;
+}
 }
 
 @media screen and (max-width: 767px) {
+  
+  .Header {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
   .background {
+    background-image: none;
+    padding-top: 0px;
+    width: 100%;
+  }
+  
+  .background2 {
   background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg.webp);
   width: 100%;
+  padding-bottom: 50px;
+  padding-top: 100px
+}
+
+.Header {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  padding: 0px;
 }
 
   /* チェックボックスを非表示にする */
@@ -262,16 +416,26 @@ body {
 }
   
   .main_content {
-    margin-top: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: none;
+    padding-top: 200px;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
   .text_big {
     font-size: 25px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
+  .text-gray {
+    width: 100%;
+  }
+  
   .benefit_image {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .img_left {
     width: 27.5%;
@@ -289,105 +453,25 @@ body {
     display: flex;
     justify-content: center;
   }
+  
+  .footer {
+    width: 100%;
+  }
+  .white_text {
+    padding-left: 0px;
+  }
+  
+  .text_big2 {
+    padding-left: 0px;
+  }
+  
   .footer2 {
     display: flex;
     flex-direction: column;
-    padding: 0 20px;
+    width: 100%;
+    padding: 0px;
   }
   .video {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 1080px) {
-  .background {
-  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
-  background-size: cover;
-  background-position: center;
-  
-  padding-bottom: 28px;
-  }
-    /* チェックボックスを非表示にする */
-.drawer_hidden {
-  display: none;
-}
-
-/* ハンバーガーアイコンの設置スペース */
-.drawer_open {
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 100;/* 重なり順を一番上にする */
-  cursor: pointer;
-}
-
-/* ハンバーガーメニューのアイコン */
-.drawer_open span,
-.drawer_open span:before,
-.drawer_open span:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
-  background: #333;
-  transition: 0.5s;
-  position: absolute;
-}
-
-/* 三本線の一番上の棒の位置調整 */
-.drawer_open span:before {
-  bottom: 8px;
-}
-
-/* 三本線の一番下の棒の位置調整 */
-.drawer_open span:after {
-  top: 8px;
-}
-
-/* アイコンがクリックされたら真ん中の線を透明にする */
-#drawer_input:checked ~ .drawer_open span {
-  background: rgba(255, 255, 255, 0);
-}
-
-/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
-#drawer_input:checked ~ .drawer_open span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-
-#drawer_input:checked ~ .drawer_open span::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-  
-/* メニューのデザイン*/
-.nav_content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 100%; /* メニューを画面の外に飛ばす */
-  z-index: 99;
-  background: #fff;
-  transition: .5s;
-}
-
-/* メニュー黒ポチを消す */
-.nav_list {
-  list-style: none;
-}
-
-/* アイコンがクリックされたらメニューを表示 */
-#drawer_input:checked ~ .nav_content {
-  left: 0;/* メニューを画面に入れる */
-}
-
-.nav_list {
-  display: flex;
-  flex-direction: column;
-}
 }
